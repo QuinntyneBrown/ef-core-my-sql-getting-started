@@ -6,6 +6,9 @@ namespace GoodCode.Infrastructure.Data
 {
     public class AppDbContext : DbContext, IAppDbContext
     {
+        public AppDbContext(DbContextOptions options)
+            : base(options) { }
+
         public DbSet<User> Users { get; }
 
     }
